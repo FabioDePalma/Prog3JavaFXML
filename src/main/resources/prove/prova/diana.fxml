@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prove.prova.DianaController">
+   <children>
+      <Label fx:id="etichettaa" layoutX="286.0" layoutY="101.0" text="prove.prova" />
+      <Button layoutX="274.0" layoutY="188.0" mnemonicParsing="false" onAction="#bottone" text="bho" />
+      <ButtonBar prefHeight="40.0" prefWidth="413.0">
+        <buttons>
+            <Label text="daje"/>
+          <Button fx:id="cambia" mnemonicParsing="false" onAction="#cambiaTitolo" text="Button" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
