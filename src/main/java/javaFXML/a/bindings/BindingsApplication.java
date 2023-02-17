@@ -12,7 +12,7 @@ public class BindingsApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(BindingsApplication.class.getResource("bindingsView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        stage.setTitle("Binding Application");
         stage.setScene(scene);
         stage.show();
     }
