@@ -182,6 +182,7 @@ public class PropertiesController {
 ```
 
 ![](electricbill.png)
+
 Nello start dove c'è il main facciamo partire il `bindProperties()` così non viene chiamato solo al primo click ma viene
 chiamato e parte appena parte l'interfaccia
 
@@ -200,5 +201,38 @@ public class PropertiesApp extends Application {
     }
 }
 ```
-DAFINIRE
-video 46:23
+## JavaFX - applicazioni con vieww e controller multipli (vedere JavaFXML.d.MVCTutorial)
+Se un’applicazione JavaFXML ha viste multiple necessita di più di un
+controller (uno per ogni view). In tal caso normalmente i controller devono
+condividere il model dell’applicazione per sincronizzarsi attraverso il model.
+Quindi, voi dovete passare il riferimento delle variabili a tutti i controller. Per
+fare questo, nel metodo start(Stage) dell’applicazione JavaFXML bisogna eseguire
+le seguenti operazioni:
+- Creare il Model _m_ (e inizializzarlo)
+- Creare i controller con FXMLLoader e prendere i loro riferimenti
+```mermaid
+flowchart LR
+
+A[View1] --> B[Controller1]
+A <--> C
+B <--> C[Model] <--> D[Controller2]
+E --> D
+C <--> E[View2]
+linkStyle 1 stroke:red
+linkStyle 2 stroke:red
+linkStyle 3 stroke:red
+linkStyle 5 stroke:red 
+```
+Nel grafico possiamo vedere che abbiamo un unico modello dei dati (Model)\
+due viste e ogni vista ha il suo controlore che gestisce l'esecuzione della vista, quindi va a prendere i dati dalla vista per istruire il modello.
+Vedere oltre a MVCtutorial vedere JavaFXML.d.dueFinestre
+> Tutorial per usare ObservableList etc.:\
+> https://docs.oracle.com/javafx/2/collections/jfxpub-collections.htm
+\
+\
+\
+> Per esempio:\
+API delle `ObservableList` (gli osservabili):
+https://docs.oracle.com/javase/8/javafx/api/javafx/collections/ObservableList.html \
+API delle `ListView` (gli osservatori):
+https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/ListView.html
