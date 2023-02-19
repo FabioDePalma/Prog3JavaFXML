@@ -26,6 +26,14 @@ public class PropertiesController {
     }
 
     public void bindProperties() {
+        // Questa istruzione associa la SimpleStringPropert del textField billValue (billValue.textProperty())
+        // alla SimpleStringProperty amountDueProperty di electricBill
+        // Quindi ogni volta che amountDueProperty viene modificata,
+        // si aggiorna la visualizzazione di billValue nella GUI.
+
+        // Inoltre il binding tra queste due property
+        // evita di definire un listener di cambiamento esplicito (ChangeListener)
+        // Quindi semplifica il codice del controller
         billValue.textProperty().bind(electricBill.amountDueProperty());
         // questo listener rimane solo per poter scrivere su standard output il valore di amountDue
         // non serve per la visualizzazione sulla finestra dell'applicazione

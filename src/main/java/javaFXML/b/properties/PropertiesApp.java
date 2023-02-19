@@ -16,6 +16,7 @@ public class PropertiesApp extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Binding with properties");
         stage.setScene(scene);
+        // Invoco il metodo bindProperties nel main
         PropertiesController contr = fxmlLoader.getController();
         contr.bindProperties();
         stage.show();
