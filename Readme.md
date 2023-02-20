@@ -2,8 +2,8 @@
 >
 > - Se non è mai stato configurato configurare una nuova applicazione
 > - andare nella sezione Build and Run, fare click su modify options(a destra)
-> - nella scheda Java fare click su add VM options e inserire questo:
-    >     --module-path "C:\\Program Files\\Java\\javafx-sdk-19.0.2.1\\lib" --add-modules javafx.controls,javafx.fxml
+> - nella scheda Java fare click su add VM options e inserire questo:\
+>     --module-path "C:\\Program Files\\Java\\javafx-sdk-19.0.2.1\\lib" --add-modules javafx.controls,javafx.fxml
 
 * * *
 
@@ -120,7 +120,7 @@ Per specificare cosa deve fare il listener quando rivela un evento di cambiament
 
 ## Uso di java beans e BINDING delle properties ai componenti della GUI (vedere JavaFXML.b.properties)
 
-La seguente aplicazione visualizza il valore del "bill" adongi suo cambiamento. Il bill cambia valore quanto l'utente
+La seguente aplicazione visualizza il valore del "bill" ad ogni suo cambiamento. Il bill cambia valore quanto l'utente
 clicca sul bottone. Come prima, il click assegna al bill un numero intero casuale. Bill rappresenta una fattura.
 NB: i TextField hanno una **String Property** che mantiene il loro valore infatti la riga `billValue.textProperty()`
 restituisce tale property
@@ -201,7 +201,7 @@ public class PropertiesApp extends Application {
     }
 }
 ```
-## JavaFX - applicazioni con vieww e controller multipli (vedere JavaFXML.d.MVCTutorial)
+## JavaFX - applicazioni con view e controller multipli (vedere JavaFXML.d.MVCTutorial)
 Se un’applicazione JavaFXML ha viste multiple necessita di più di un
 controller (uno per ogni view). In tal caso normalmente i controller devono
 condividere il model dell’applicazione per sincronizzarsi attraverso il model.
