@@ -12,11 +12,9 @@ import java.net.URL;
 public class CorrettoreEsercizioApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        URL a = CorrettoreEsercizioApp.class.getResource("correttoreEsercizioView.fxml");
-        System.out.println(a);
         FXMLLoader fxmlLoader = new FXMLLoader(CorrettoreEsercizioApp.class.getResource("correttoreEsercizioView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        stage.setTitle("Esercizi");
         stage.setScene(scene);
         CorrettoreEsercizioController contr = fxmlLoader.getController();
         contr.initModel();

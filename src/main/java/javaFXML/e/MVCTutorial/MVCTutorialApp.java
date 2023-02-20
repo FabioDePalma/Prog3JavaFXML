@@ -1,6 +1,7 @@
 package javaFXML.e.MVCTutorial;
 
 import javaFXML.e.MVCTutorial.controller.EditorController;
+import javaFXML.e.MVCTutorial.controller.HelloController;
 import javaFXML.e.MVCTutorial.controller.ListController;
 import javaFXML.e.MVCTutorial.controller.MenuController;
 import javaFXML.e.MVCTutorial.model.DataModel;
@@ -27,6 +28,10 @@ public class MVCTutorialApp extends Application {
         FXMLLoader menuLoader = new FXMLLoader(getClass().getResource("menu.fxml"));
         root.setTop(menuLoader.load());
         MenuController menuController = menuLoader.getController();
+
+        FXMLLoader provaLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+        root.setBottom(provaLoader.load());
+        HelloController helloController =  provaLoader.getController();
 
         DataModel model = new DataModel();
         listController.initModel(model);

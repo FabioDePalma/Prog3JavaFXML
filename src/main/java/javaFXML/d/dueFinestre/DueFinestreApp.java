@@ -16,9 +16,9 @@ public class DueFinestreApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Bill electricBill = new Bill(); // creo il model
-        URL a = DueFinestreApp.class.getResource("prova.fxml");
+        URL a = DueFinestreApp.class.getResource("sample.fxml");
         System.out.println(a);
-        FXMLLoader fxmlLoader = new FXMLLoader(DueFinestreApp.class.getResource("prova.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(DueFinestreApp.class.getResource("sample.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 520, 440);
         stage.setTitle("Hello World!");
         stage.setScene(scene);
