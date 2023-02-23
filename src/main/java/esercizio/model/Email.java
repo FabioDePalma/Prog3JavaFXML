@@ -33,4 +33,19 @@ public class Email {
     public String getTesto() {
         return testo;
     }
+
+   /* @Override
+    public String toString() {
+        return "Email{" +
+                "mittente=" + mittente +
+                ", dest=" + dest +
+                ", titolo='" + titolo + '\'' +
+                ", testo='" + testo + '\'' +
+                '}';
+    }*/
+
+    @Override
+    public String toString() {
+        return String.join(" - ", List.of(this.mittente.getNome(), this.titolo));
+    }
 }
